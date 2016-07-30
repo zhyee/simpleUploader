@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file</title>
+</head>
+<body>
+
+<input type="file" name="upfile" id="upfile">
+
+
+<script>
+var upfile = document.getElementById('upfile');
+
+upfile.onchange = function(){
+    var file = upfile.files[0];
+    if(file){
+       var name = file.name;
+        console.log(name);
+
+        var index = name.lastIndexOf('.');
+        var ext = name.substr(index + 1);
+        alert('后缀名是：' + ext);
+    }
+}
+
+</script>
+
+</body>
+</html>
