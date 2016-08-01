@@ -159,7 +159,9 @@
                 if (debug) {
                     console.log('文件上传结束...');
                 }
-                fileProgress.delay(1000).fadeOut(1000);
+                fileProgress.delay(1000).fadeOut(1000, function () {
+                    fileProgressbar.css('width', '0');
+                });
             });
 
             if (typeof options.onUploadStart != 'undefined')
