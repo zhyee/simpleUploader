@@ -38,7 +38,7 @@
         fileInput.css({height : options.height + 'px'})
             .addClass('simple-uploader-input')
             .wrap($('<div class="simple-uploader"></div>'))
-            .wrap($('<button class="simple-uploader-button"></button>'));
+            .wrap($('<button type="button" class="simple-uploader-button"></button>'));
 
         var fileButton = fileInput.parent();
 
@@ -97,7 +97,7 @@
                 {
                     if (options.extraFormData.hasOwnProperty(field))
                     {
-                        formData.append(field, options.extraFormData);
+                        formData.append(field, options.extraFormData[field]);
                     }
                 }
             }
