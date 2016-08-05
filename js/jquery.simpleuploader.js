@@ -120,18 +120,18 @@
                         if (typeof options.onInit != 'undefined')
                         {
                             options.onInit();
-                            if (debug) {
-                                console.log('ajax初始化完成，上传url：' + options.url);
-                            }
+                        }
+                        if (debug) {
+                            console.log('ajax初始化完成，上传url：' + options.url);
                         }
                         break;
                     case 4:
                         if (typeof options.onUploadSuccess != 'undefined')
                         {
                             options.onUploadSuccess(xhr.responseText);
-                            if (debug) {
-                                console.log('文件上传成功，处理返回结果...');
-                            }
+                        }
+                        if (debug) {
+                            console.log('文件上传成功，处理返回结果...');
                         }
                         break;
                 }

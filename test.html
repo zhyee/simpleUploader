@@ -1,57 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>SimpleUploader test</title>
-
-
-    <style>
-        html,body,div,p,h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,ol,li,span,button{
-            padding: 0;
-            margin: 0;
-        }
-        .form {
-            margin: 50px 0 0 50px;
-        }
-        .form-group {
-            padding: 10px 5px;
-        }
-    </style>
-
+    <title>SimpleUploader demo</title>
 
     <link rel="stylesheet" href="css/simple-uploader.css">
     <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">
 
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery.simpleuploader.js"></script>
-
 </head>
 <body>
 
-
-<form class="form" action="">
-
-    <div class="form-group">
-        <label for="user">用户名</label>
-        <input type="text" name="user" id="user">
-    </div>
-
-    <div class="form-group">
-        <label for="passowrd">密码</label>
-        <input type="password" name="password" id="passowrd">
-    </div>
-
-    <div class="form-group">
-        <label for="upfile">缩略图</label>
-        <input type="file" name="upfile" id="upfile">
-    </div>
-
-    <div class="form-group">
-        <button type="submit">确定</button>
-        <button type="button">取消</button>
-    </div>
-
-</form>
+<input type="file" name="upfile" id="upfile">
 
 
 <script>
@@ -60,7 +21,6 @@
         $('#upfile').simpleUploader({
             debug      : true,  //  打开控制台调试信息
             buttonText : '<i class="fa fa-plus fa-lg"></i>',
-            buttonImage : '',
             fileSizeLimit : 32 * 1024 * 1024,
             url : 'result.json',   // 这里只是便于测试， 实际业务中应该是服务端处理后返回的JSON数据
             onUploadSuccess : function (rt) {
