@@ -49,6 +49,7 @@
         if (options.buttonImage !== '')
         {
             buttonCss.background = 'url(' + options.buttonImage + ') center center no-repeat';
+            buttonCss['backgroud-size'] = 'cover';
         }
         fileButton.css(buttonCss).append(options.buttonText);
 
@@ -130,6 +131,9 @@
                         {
                             options.onUploadSuccess(xhr.responseText);
                         }
+                        fileProgress.delay(1000).fadeOut(1000, function () {
+                            fileProgressbar.css('width', '0');
+                        });
                         if (debug) {
                             console.log('文件上传成功，处理返回结果...');
                         }

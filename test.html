@@ -22,7 +22,7 @@
             debug      : true,  //  打开控制台调试信息
             buttonText : '<i class="fa fa-plus fa-lg"></i>',
             fileSizeLimit : 32 * 1024 * 1024,
-            url : 'result.json',   // 这里只是便于测试， 实际业务中应该是服务端处理后返回的JSON数据
+            url : 'result.json',   // 这里只是便于测试，实际业务中应该是服务端处理后返回的JSON数据
             onUploadSuccess : function (rt) {
                 var result = JSON.parse(rt);
                 if (result.errer_code == 0){
