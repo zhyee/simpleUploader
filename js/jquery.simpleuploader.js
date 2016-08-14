@@ -166,6 +166,7 @@
                 fileProgress.delay(1000).fadeOut(1000, function () {
                     fileProgressbar.css('width', '0');
                 });
+                fileInput.val('');
             });
 
             if (typeof options.onUploadStart != 'undefined')
